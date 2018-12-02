@@ -12,7 +12,7 @@
 まず[前回](https://bannzai.hatenadiary.jp/entry/2018/11/28/025612)までのまとめなのですが、下記のQueryを実行すると `Todo.id` の一覧が取得できたことまで確認しました。
 
 ### Query
-```GrpahQL
+```graphql
 query {
   todos {
     id
@@ -42,7 +42,7 @@ query {
 今回はこの `Todo` に `title` というプロパティを足していきたいと思います。  
 
 ## schema.graphqlの編集
-初めに `schema.graphql` を編集していきましょう。今回は `Todo` のプロパティを編集していくので
+初めに `schema.graphql` を編集していきましょう。今回は `Todo` にプロパティを追加していくので下記のスキームに注目します。
 
 ```graphql
 type Todo {
@@ -57,9 +57,29 @@ type Query {
 }
 ```
 
-この二つのスキーマに着目します。 上の `type Todo` から始まるものはレスポンスの形式を表しています。 `ID!` 型の `id` や `String!` 型の `text` というプロパティがあるといった具合ですね。これは `gqlgen generate` の後に `models_gen.go` にコードが吐き出されます。
+### type Todo { ...
+ 上の `type Todo` から始まるものはレスポンスの形式を表しています。 `ID!` 型の `id` や `String!` 型の `text` というプロパティがあるといった具合ですね。これは `gqlgen generate` の後に `models_gen.go` にコードが吐き出されます。
+
+ ### type Query { ....
 下の `type Query` から始まり `todos: [Todo!]` フィールドを持っている構造は `Request` を投げる時・受け取る時のインタフェースの定義になります。これは `gqlgen generate` の後に　`resolver.go` に記述したインタフェースに対応した `Resolver` のコードが吐き出されます。  
 
-試しにAPIのレスポンスに `Todo` の `title` を返したいとなったと仮定しましょう。今のままでは `id,text,done,user` の4つのフィールドはレスポンスとして返せますが `title` は返すことができません。こういう場合の `gqlgen` のを使った開発の流れは
 
-1.  `schema.graphql` を編集
+今のままの `Todo` では `id,text,done,user` の4つのフィールドはレスポンスとして返せますが `title` は返すことができません。  
+`title` を返せるようにするためにまず `schema.graphql` を編集して `Todo` に `title` を打ち貸しましょう
+
+```graphql  
+type Todo {
+  id: ID!
+  text: String!
+  done: Boolean!
+  user: User!
+
+  title: String! # ここが追加分
+}
+```
+
+`Scehma first` を謳っている`gqlgen`ではスキーマファイルと実装する`GraphQL`のインtらフェースが合うように開発を進めていきます。  
+先ほど、`titlte: String!` の部分を追加しました。続いてこの`schema`の情報を`Go` のコードに反映させていきます。
+
+## gqlgen generate
+
