@@ -81,5 +81,106 @@ type Todo {
 `Scehma first` を謳っている`gqlgen`ではスキーマファイルと実装する`GraphQL`のインtらフェースが合うように開発を進めていきます。  
 先ほど、`titlte: String!` の部分を追加しました。続いてこの`schema`の情報を`Go` のコードに反映させていきます。
 
-## gqlgen generate
+## Goのコードを生成する
+前回では`gqlgen init`した結果、Exmapleの`Go`のコードが作成されました。   
+追加したフィールドを`Go`に反映させたい場合は`gqlgen generate`を実行します。
+
+```shell
+$ gqlgen generate
+```
+
+ちなみに短縮して `gqlgen` とだけ打って実行しても構いません。  
+
+```shell
+$ gqlgen
+```
+
+実行後 `generated.go`, `models_gen.go`が変更されていれば成功です。   
+特に `models_gen.go`の中身を確認してみましょう。 `Todo` に `Title` というプロパティが追加されていることが確認できると思います。  
+
+```Go
+ type Todo struct {
+	ID    string `json:"id"`
+	Text  string `json:"text"`
+	Done  bool   `json:"done"`
+	User  User   `json:"user"`
+	Title string `json:"title"`
+ }
+```
+
+次に前回と同様に`resolver.go` の `Todos` メソッドを編集していきましょう。  
+
+```Go
+func (r *queryResolver) Todos(ctx context.Context) ([]Todo, error) {
+	return []Todo{
+		Todo{
+			ID:    "1",
+			Title: "First",
+		},
+		Todo{
+			ID:    "2",
+			Title: "Second",
+		},
+		Todo{
+			ID:    "3",
+			Title: "Third",
+		},
+	}, nil
+}
+```
+
+これで完了です。[GraphQL Playground](https://github.com/prisma/graphql-playground)から結果を確認してみましょう。  
+
+```
+$ go run ./server/server.go
+```
+
+サーバーが立ち上がったあら下記のQueryを貼り付けて実行してみましょう。
+
+```graphql
+{
+  todos {
+    id
+    title
+  }
+}
+```
+
+```json
+{
+  "data": {
+    "todos": [
+      {
+        "id": "1",
+        "title": "First"
+      },
+      {
+        "id": "2",
+        "title": "Second"
+      },
+      {
+        "id": "3",
+        "title": "Third"
+      }
+    ]
+  }
+}
+```
+
+画面はこのような具合になっていると思います。
+
+<img src="https://user-images.githubusercontent.com/10897361/49340575-0e8cec80-f685-11e8-9cde-2f706c5a59d6.png" />
+
+## 終わりに
+今回はプロパティの追加するというユースケースを通して `gqlgen` の機能を使い `Schema first` で実装をしていきました。
+
+GitHubにここまでの内容を公開しています。  
+https://github.com/bannzai/gqlgen-demo  
+
+branchは `fix/add/field` となっています。前回からの差分としてPRを一つ作ってあります。
+https://github.com/bannzai/gqlgen-demo/pull/2
+
+この記事がいいと思ったら、**GitHub**のスターください
+
+おしまい \\(^o^)/
 
