@@ -1,4 +1,3 @@
-
 ## gqlgenでSchema firstでAPIを作ってみる
 [前回](https://bannzai.hatenadiary.jp/entry/2018/11/28/025612)ではgqlgenでサーバーをlocalhostに立ち上げて、[GraphQL Playground](https://github.com/prisma/graphql-playground)から実際に `Query` が実行されるところまで確認できました。
 
@@ -60,10 +59,10 @@ type Query {
 ### type Todo { ...
  上の `type Todo` から始まるものはレスポンスの形式を表しています。 `ID!` 型の `id` や `String!` 型の `text` というプロパティがあるといった具合ですね。これは `gqlgen generate` の後に `models_gen.go` にコードが吐き出されます。
 
- ### type Query { ....
+### type Query { ....
 下の `type Query` から始まり `todos: [Todo!]` フィールドを持っている構造は `Request` を投げる時・受け取る時のインタフェースの定義になります。これは `gqlgen generate` の後に　`resolver.go` に記述したインタフェースに対応した `Resolver` のコードが吐き出されます。  
 
-
+### 編集していく
 今のままの `Todo` では `id,text,done,user` の4つのフィールドはレスポンスとして返せますが `title` は返すことができません。  
 `title` を返せるようにするためにまず `schema.graphql` を編集して `Todo` に `title` を追加しましょう。  
 
@@ -74,7 +73,7 @@ type Todo {
   done: Boolean!
   user: User!
 
-  title: String! # ここが追加分
+  title: String! # ここが追加
 }
 ```
 
@@ -96,7 +95,8 @@ $ gqlgen
 ```
 
 実行後 `generated.go`, `models_gen.go`が変更されていれば成功です。   
-特に `models_gen.go`の中身を確認してみましょう。 `Todo` に `Title` というプロパティが追加されていることが確認できると思います。  
+特に `models_gen.go`の中身を確認してみましょう。  
+`Todo` に `Title` というプロパティが追加されていることが確認できると思います。  
 
 ```Go
  type Todo struct {
