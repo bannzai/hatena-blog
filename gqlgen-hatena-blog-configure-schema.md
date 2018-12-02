@@ -65,7 +65,7 @@ type Query {
 
 
 今のままの `Todo` では `id,text,done,user` の4つのフィールドはレスポンスとして返せますが `title` は返すことができません。  
-`title` を返せるようにするためにまず `schema.graphql` を編集して `Todo` に `title` を打ち貸しましょう
+`title` を返せるようにするためにまず `schema.graphql` を編集して `Todo` に `title` を追加しましょう。  
 
 ```graphql  
 type Todo {
