@@ -177,7 +177,7 @@ $ go run ./server/server.go
 GitHubにここまでの内容を公開しています。  
 https://github.com/bannzai/gqlgen-demo  
 
-branchは `fix/add/field` となっています。前回からの差分としてPRを一つ作ってあります。
+branchは `fix/add/field` となっています。前回からの差分としてPRを一つ作ってあります。  
 https://github.com/bannzai/gqlgen-demo/pull/2
 
 この記事がいいと思ったら、**GitHub**のスターください
