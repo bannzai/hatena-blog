@@ -1,4 +1,4 @@
-## gqlgenでSchema firstでAPIを作ってみる
+## gqlgenでTypeにプロパティを追加してみよう
 [前回](https://bannzai.hatenadiary.jp/entry/2018/11/28/025612)ではgqlgenでサーバーをlocalhostに立ち上げて、[GraphQL Playground](https://github.com/prisma/graphql-playground)から実際に `Query` が実行されるところまで確認できました。
 
 今回は一度コード生成された後にGraphQLのインタフェースを変えたい場合どう実装していくのか書いていこうと思います。  
