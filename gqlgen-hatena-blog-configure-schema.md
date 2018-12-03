@@ -50,21 +50,10 @@ type Todo {
   done: Boolean!
   user: User!
 }
-
-type Query {
-  todos: [Todo!]!
-}
 ```
 
-### type Todo { ...
- 上の `type Todo` から始まるものはレスポンスの形式を表しています。 `ID!` 型の `id` や `String!` 型の `text` というプロパティがあるといった具合ですね。これは `gqlgen generate` の後に `models_gen.go` にコードが吐き出されます。
-
-### type Query { ....
-下の `type Query` から始まり `todos: [Todo!]` フィールドを持っている構造は `Request` を投げる時・受け取る時のインタフェースの定義になります。これは `gqlgen generate` の後に　`resolver.go` に記述したインタフェースに対応した `Resolver` のコードが吐き出されます。  
-
-### 編集していく
-今のままの `Todo` では `id,text,done,user` の4つのフィールドはレスポンスとして返せますが `title` は返すことができません。  
-`title` を返せるようにするためにまず `schema.graphql` を編集して `Todo` に `title` を追加しましょう。  
+上の `type Todo` から始まるものはレスポンスの形式を表しています。 `ID!` 型の `id` や `String!` 型の `text` というプロパティがあるといった具合ですね。これは `gqlgen generate` の後に `models_gen.go` にコードが吐き出されます。
+今のままの `Todo` では `id,text,done,user` の4つのフィールドはレスポンスとして返せますが `title` は返すことができません。`title` を返せるようにするためにまず `schema.graphql` を編集して `Todo` に `title` を追加しましょう。  
 
 ```graphql  
 type Todo {
