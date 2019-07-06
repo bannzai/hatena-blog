@@ -55,3 +55,6 @@ $ teapot start                                                        
 -rw-r--r--  1 bannzai  1522739515  367  7  6 22:43 /Users/bannzai/develop/oss/Teapot/Sources/Teapot/main.swift
 ```
 
+## なぜ Teapot なのか
+以前に[Ocha](https://bannzai.hatenadiary.jp/)
+
