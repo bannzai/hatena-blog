@@ -56,5 +56,9 @@ $ teapot start                                                        
 ```
 
 ## なぜ Teapot なのか
-以前に[Ocha](https://github.com/bannzai/ocha)というライブラリを作って[ブログ](https://bannzai.hatenadiary.jp/)にも記事を書きました。
+以前に[Ocha](https://github.com/bannzai/ocha)というライブラリを作って[ブログ](https://bannzai.hatenadiary.jp/)にも記事を書きました。今回の **Teapot** は **Ocha** を `import` して実現しています。**Ocha** が入っているので **Teapot** にしました。  
+
+作りたかった理由としてはファイル変更時に実行したいことってたまにあるなー。でも**Ocha**は自分で**Swift**のコードを改めて書く必要があるなー。もっと気軽に使いたいなー。と思って作った感じですね。
+
+
 
