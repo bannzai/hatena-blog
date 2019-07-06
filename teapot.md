@@ -17,20 +17,20 @@ $ mint install bannzai/teapot
 **Teapot**の使い方を簡単に紹介します。 Teapotでは`teapot.yml`という設定ファイルが必要になってきます。下記のように `ignore`, `source`, `execute` の3要素があります。  
 
 ```yaml
-ignore:
-- ".git"
-- ".gitignore"
-- tests/*
 source:
 - build/*
 - Sources/*.*
 - Sources/Teapot/*.*
+ignore:
+- ".git"
+- ".gitignore"
+- tests/*
 execute: 
 - ls -la
 ```
 
-- `ignore` が
-- `source` が
+- `source` が 変更点を検知したいファイル指定です。
+- `ignore` が 検知した変更点を無視するファイル指定です。
 - `execute` が
 
 
