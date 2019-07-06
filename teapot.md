@@ -33,8 +33,14 @@ execute:
 - `ignore` が 検知した変更点を無視するファイル指定です。
 - `execute` が 変更があったファイルに対して実行するシェルスクリプトです。
 
+これは `$ teapot setup` でカレントディレクトリに作成することができます。
 
+```bash
+$ teapot setup
+🍵 Teapot setup completion. You can edit ./teapot.yml 🍵
+```
 
+そして、この用意された `teapot.yml` を自分の都合に合わせて編集して保存します。これで設定ファイルの準備ができました。続いて `$ teapot start` をすることで `teapot` が動き出します。
 
 
 
