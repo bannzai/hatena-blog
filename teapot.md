@@ -47,4 +47,12 @@ $ teapot start
 🍵 Teapot start 🍵
 ```
 
+`$ ls -a` を実行するように `execute` に設定していた場合、`./Sources/Teapot/main.swift` を再度保存した場合に下記のように標準出力されます。
+
+
+```bash
+$ teapot start                                                        
+🍵 Teapot start 🍵
+-rw-r--r--  1 bannzai  1522739515  367  7  6 22:43 /Users/bannzai/develop/oss/Teapot/Sources/Teapot/main.swift
+```
 
