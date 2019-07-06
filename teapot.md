@@ -56,6 +56,5 @@ $ teapot start                                                        
 ```
 
 ## なぜ Teapot なのか
-以前に[Ocha](https://github.com/bannzai/ocha)
-[Ocha](https://bannzai.hatenadiary.jp/)
+以前に[Ocha](https://github.com/bannzai/ocha)というライブラリを作って[ブログ](https://bannzai.hatenadiary.jp/)にも記事を書きました。
 
