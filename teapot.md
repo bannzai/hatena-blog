@@ -14,7 +14,7 @@ $ mint install bannzai/teapot
 ```
 
 ## 使い方
-**Teapot**の使い方を簡単に紹介します。 まず、インストールからです。
+**Teapot**の使い方を簡単に紹介します。 
 
 
 
