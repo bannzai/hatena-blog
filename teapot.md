@@ -1,6 +1,5 @@
-
 ## 🍵を入れました
-表題の通り[Ocha](https://github.com/bannzai/ocha)を[Teapot](https://github.com/bannzai/teapot)に淹れました
+表題の通り[Ocha](https://github.com/bannzai/ocha)を[Teapot](https://github.com/bannzai/teapot)に入れました。  
 この記事では[Teapot](https://github.com/bannzai/teapot)を紹介したいと思います。
 
 ## Teapotについて
@@ -65,6 +64,25 @@ $ teapot start                                                        
 
 
 ## 素敵なロゴを描いてもらいました
-[TeapotのREADME](https://github.com/bannzai/Teapot)を見るとわかるのですが素敵なロゴを[井上乃彩 / Noa Inoue](https://twitter.com/noa_design51)さんに描いていただきました。
-実は**Ocha**の時も井上さんにロゴを描いてもらって今回の**Teapot**にもロゴが欲しかったので引き続きお願いさせてもらいました。**Ocha**との親和性も考えられててとても面白くかわいいロゴになっておりとても良いです。今回の自分の作品である `Ocha` → `Teapot` の歴史的な流れがあって、それがロゴというわかりやすい形で関連付けされているのが自分にとっても嬉しいです。
+[TeapotのREADME](https://github.com/bannzai/Teapot)を見るとわかるのですが素敵なロゴを[井上乃彩 / Noa Inoue](https://twitter.com/noa_design51)さんに描いていただきました。実は**Ocha**の時も井上さんにロゴを描いてもらっていました。今回の**Teapot**にもロゴが欲しかったので引き続きお願いさせてもらいました。**Ocha**との親和性も考えられててとても面白くかわいいロゴになっておりとても良いです。今回の自分の作品である `Ocha` → `Teapot` の歴史的な流れがあって、それがロゴというわかりやすい形で関連付けされているのが自分にとっても嬉しいです。
 
+噂のロゴです。
+
+[f:id:bannzai:20190707000120p:plain]
+
+## おまけ
+実はすでに[overlook](https://github.com/wess/overlook)という似たようなツールが存在しています。が、これを動かしたりはしていないです。これを知ったタイミングが少なくとも**Ocha**を完成させたあとだったので**Teapot**も思いついちゃったし作りきっちゃおう。と思って結果的に車輪の再発明になりました。overlookのほうはちゃんとウォッチしていないので詳細な機能の比較はできないのですが、自分でコードを知っているかどうかで扱いやすさや安心感は違うので車輪の再発明だとしても無駄ではなかったかなと思っています。
+
+
+## 最後に
+今回は[Teapot](https://github.com/bannzai/Teapot)というライブラリを紹介しました。これも自作である[Ocha](https://github.com/bannzai/ocha)というライブラリに強く関連されています。**Teapot**は`Swift`で動くCLIツールとなっており、簡易的な`yaml` を用意することで簡単に変更されたファイルに対してシェルスクリプトを実行できるようになっています。コード量自体はそんなに多くないのですらっと読めるかもしれないです。**Teapot** を使ってバグ等を発見したら日本語でいいので[issue](https://github.com/bannzai/teapot/issues)や[PR](https://github.com/bannzai/teapot/pulls)を作ってもらえたら嬉しいです。
+
+あとOSSにロゴ乗っているの最高です。テンション上がります。
+
+このライブラリが便利！最高！クール！ロゴかわいい！と思ったそこの貴方へ
+
+<p style="font-weight:800; font-size:60px;">
+スターください 🍵
+</p>
+
+おしまい \(^o^)/
