@@ -25,12 +25,14 @@ ignore:
 - ".gitignore"
 - tests/*
 execute: 
-- ls -la
+- ls -la __FILE__
+- echo $HOME
 ```
 
 - `source` が 変更点を検知したいファイル指定です。
 - `ignore` が 検知した変更点を無視するファイル指定です。
 - `execute` が 変更があったファイルに対して実行するシェルスクリプトです。
+- `__FILE__` は変更されたファイルのパスが渡ってきます。
 
 これは `$ teapot setup` でカレントディレクトリに作成することができます。
 
