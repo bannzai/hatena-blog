@@ -1,0 +1,14 @@
+ignore:
+- .git*
+source:
+- README.md
+- gqlgen-hatena-blog-configure-schema.md
+- teapot.md
+- gqlgen-hatena-blog.md
+- oss_constructor.md
+- qiita-advent-calendar-ios-how-to-use-sourcery-when-test.md
+- gqlgen-hatena-blog.html
+- configure-query.md
+execute:
+- git add
+- git commit -m "Update"
