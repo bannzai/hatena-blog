@@ -12,3 +12,4 @@ source:
 execute:
 - git add __FILE__
 - git commit -m "Update __FILE__"
+- git push origin
