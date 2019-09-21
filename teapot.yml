@@ -9,6 +9,7 @@ source:
 - qiita-advent-calendar-ios-how-to-use-sourcery-when-test.md
 - gqlgen-hatena-blog.html
 - configure-query.md
+- iosdc-2019.md
 execute:
 - git add __FILE__
 - git commit -m "Update __FILE__"
