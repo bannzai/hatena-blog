@@ -1,5 +1,4 @@
 ## iOSDC 参加してきました
 [iOSDC 2019](https://iosdc.jp/2019/)に参加してきました。とても楽しかった。
-iOSDCはおそらく2回目から3年連続で参加しており、どれもSpeakerとして参加させてもらいました。
-今年はiOSDCのブログを書いて
+iOSDCではSpeakerとして参加してきました。そしてiOSDCのReject Conferenceでも2日間発表をさせてもらいました。(リジェクトとは)
 
