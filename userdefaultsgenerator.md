@@ -31,5 +31,4 @@ $ mint install bannzai/UserDefaultsGenerator # install
 $ udg generate
 $ ls UserDefaultsGenerator.generated.swift
 UserDefaultsGenerator.generated.swift
-
 ```
