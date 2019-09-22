@@ -24,7 +24,8 @@ iOSアプリ開発をしていると誰もが一度はお世話になったこ�
   type: Array
 ```
 
-ymlが用意できたら `$ udg generate` というコマンドを実行します。事前にUserDefaultsGeneratorをインストールしておきましょう。 [mint](https://github.com/yonaskolb/Mint)によるインストールが可能です。
+ymlが用意できたら `$ udg generate` というコマンドを実行します。コマンドを実行したら `UserDefaultsGenerator.generated.swift` というSwiftファイルができています。  
+事前にUserDefaultsGeneratorをインストールしておきましょう。 [mint](https://github.com/yonaskolb/Mint)によるインストールが可能です。
 
 ```shell
 $ mint install bannzai/UserDefaultsGenerator # install
