@@ -94,5 +94,5 @@ $ switchecker
 
 ファイルが増えてきたら `,` 区切りで対象を増加できます。
 ```shell
-$ switchecker -source=enum.go -target=use.go
+$ switchecker -source=enum.go -target=use.go,use2.go
 ```
