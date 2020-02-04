@@ -141,3 +141,5 @@ Usage of switchecker:
 使ったパッケージや構成をさらっと。  
 
 [go/ast](https://golang.org/pkg/go/ast/) を `-source` の引数の解析部分で [golang.org/x/tools/go/packages](https://godoc.org/golang.org/x/tools/go/packages) を `-target` で渡したファイルの型情報と `-source` から作った構造体の情報とマッピングしてチェックする。そういった流れになっています。
+
+`-target` の型情報取得は[go/types](https://golang.org/pkg/go/types/)でも行けるのかなあ。と思ったのですが、今回[Config.Check](https://golang.org/pkg/go/types/#Config.Check)
