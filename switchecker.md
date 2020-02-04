@@ -1,3 +1,3 @@
-# Goでenumのswitchをチェックできるツールを作りました
+# Goでenumのswitchをcheckできるツールを作りました
 
 
