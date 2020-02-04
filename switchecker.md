@@ -82,7 +82,7 @@ func function(x language) {
 switchecker -source=enum.go -target=use.go
 ```
 
-もしくはglobも使えます
+globも使えます
 ```shell
 
 ```
