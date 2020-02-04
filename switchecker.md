@@ -79,10 +79,10 @@ func function(x language) {
 この場合は `-source` に `enum.go` を渡して、 チェックしたいファイルである `use.go` を `-target` に渡して使用をします。
 
 ```shell
-switchecker -source=enum.go -target=use.go
+$ switchecker -source=enum.go -target=use.go
 ```
 
 globも使えます
 ```shell
-switchecker -source=enum.go -target=use.go
+$ switchecker -source=*.go -target=*.go
 ```
