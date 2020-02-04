@@ -108,3 +108,5 @@ Usage of switchecker:
   -verbose
         Enabled verbose log
 ```
+
+## 用量
