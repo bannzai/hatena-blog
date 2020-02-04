@@ -91,3 +91,6 @@ $ switchecker -source=*.go -target=*.go
 ```shell
 $ switchecker 
 ```
+
+```shell
+```
