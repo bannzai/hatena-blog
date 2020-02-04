@@ -106,5 +106,4 @@ Usage of switchecker:
         Target go files are containing to use enum. Multiple specifications can be specified separated by ,. e.g) *.go,pkg/**/*.go  (default "*.go")
   -verbose
         Enabled verbose log
-
 ```
