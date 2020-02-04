@@ -58,6 +58,8 @@ const (
 
 **use.go**
 ```go
+package main
+
 func function(x language) {
 	switch x {
 	case swift:
