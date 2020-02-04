@@ -145,3 +145,5 @@ Usage of switchecker:
 `-target` の型情報取得は[go/types](https://golang.org/pkg/go/types/)でも行けるのかなあ。と思ったのですが[Config.Check](https://golang.org/pkg/go/types/#Config.Check)を使ってみた所、渡した引数のGoファイルの型情報は取得できているが、標準のパッケージではない自作のパッケージ等がimportされている場合はそっちの型情報が取得できずに `Config.Error` が返ってきてしまいました。少し試行錯誤しましたがイマイチimport先の型情報の取得を `go/types` を使って取得するやりかたがわからなくて、`golang.org/x/tools/go/packages` の方ではimport先の型情報まで取得できたのでこちらを使用しています。
 
 ## まとめ
+個人的に `ast` や 型情報みたいなメタな部分を使って効率化を測るツールを作るのが好きで、 その中でもコード量が少なめかつ割と愛用しそうなツールができたと思っています。
+
