@@ -94,6 +94,14 @@ $ switchecker -source=*.go -target=*.go
 $ switchecker 
 ```
 
+```shell
+$ ls
+enum.go main.go use.go
+
+$ switchecker
+Succesfull!! $ switchecker -source=*.go -target=*.go
+```
+
 ファイルが増えてきたら `,` 区切りで対象を増加できます。
 ```shell
 $ switchecker -source=enum.go -target=use.go,use2.go
