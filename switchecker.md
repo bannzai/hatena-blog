@@ -86,3 +86,8 @@ globも使えます
 ```shell
 $ switchecker -source=*.go -target=*.go
 ```
+
+デフォルトでは `*.go` 渡すようになっているので省略も可能です。
+```shell
+$ switchecker -source=*.go -target=*.go
+```
