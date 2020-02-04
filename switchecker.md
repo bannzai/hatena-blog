@@ -94,6 +94,7 @@ $ switchecker -source=*.go -target=*.go
 $ switchecker 
 ```
 
+実行して成功するとこんな感じです。
 ```shell
 $ ls
 enum.go main.go use.go
