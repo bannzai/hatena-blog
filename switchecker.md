@@ -97,8 +97,9 @@ $ switchecker
 $ switchecker -source=enum.go -target=use.go,use2.go
 ```
 
+そしてhelpです。
 ```
-switchecker --help                                                                                      
+$ switchecker --help                                                                                      
 Usage of switchecker:
   -source string
         Source go files are containing enum definition. Multiple specifications can be specified separated by ,. e.g) *.go,pkg/**/*.go  (default "*.go")
