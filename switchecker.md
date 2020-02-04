@@ -84,5 +84,5 @@ switchecker -source=enum.go -target=use.go
 
 globも使えます
 ```shell
-
+switchecker -source=enum.go -target=use.go
 ```
