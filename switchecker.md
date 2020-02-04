@@ -117,4 +117,3 @@ Usage of switchecker:
 
 
 
-
