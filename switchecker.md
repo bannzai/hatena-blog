@@ -79,5 +79,5 @@ func function(x language) {
 この場合は `-source` に `enum.go` を渡して、 チェックしたいファイルである `use.go` を `-target` に渡して使用をします。
 
 ```shell
-switchecker -source=pkg/**/*.go,internal/**/*.go -target=pkg/**/*.go
+switchecker -source=enum.go -target=pkg/**/*.go
 ```
