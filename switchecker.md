@@ -1,6 +1,6 @@
 # Goでenumのswitchをcheckできるツールを作りました
 
-Goでenumのswitchをcheckできるツール [switchecker](https://github.com/bannzai/switchecker) を作りました。
+Goで `enum` のswitchをcheckできるツール [switchecker](https://github.com/bannzai/switchecker) を作りました。
 
 ## switchecker
 **switchecker** は Goのソースコード内でswitch文で `enum` を用いた値のパターンマッチングにおいて `enum` で宣言されている `case` をすべて網羅できているかをチェックしてくれるツールです。
