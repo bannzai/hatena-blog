@@ -131,6 +131,7 @@ Usage of switchecker:
 あとはトップレベルで宣言されたものだけを現在対応しています。`func` の中で同じ構文で書いていても対応していないです。 `func` の中で宣言するケースはきっと多くないだろう。というのと `ast` 等で底を解析して他の型と区別させるのが大変。という理由です。
 
 ## 技術
-使ったパッケージをさらっと
+使ったパッケージや構成をさらっと
 
 [go/ast](https://golang.org/pkg/go/ast/) を `-source` の引数の解析部分で  
+[golang.org/x/tools/go/packages](https://godoc.org/golang.org/x/tools/go/packages) を `-target` で渡したファイルの型情報と `-source` から作った構造体の情報とマッピング
