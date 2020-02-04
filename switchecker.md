@@ -138,6 +138,6 @@ Usage of switchecker:
 - https://github.com/bannzai/switchecker/blob/master/parser_test.go
 
 ## 技術
-使ったパッケージや構成をさらっと  
+使ったパッケージや構成をさらっと。  
 
 [go/ast](https://golang.org/pkg/go/ast/) を `-source` の引数の解析部分で [golang.org/x/tools/go/packages](https://godoc.org/golang.org/x/tools/go/packages) を `-target` で渡したファイルの型情報と `-source` から作った構造体の情報とマッピング
