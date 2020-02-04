@@ -130,6 +130,13 @@ Usage of switchecker:
 
 あとはトップレベルで宣言されたものだけを現在対応しています。`func` の中で同じ構文で書いていても対応していないです。 `func` の中で宣言するケースはきっと多くないだろう。というのと `ast` 等で底を解析して他の型と区別させるのが大変。という理由です。
 
+どこまでサポートしているか、想定しているか。を厳密に知りたい方はコードを読むのが一番正しいとは思うのでぜひ見てみてください。  
+ちなみにテストを見るとサポート範囲のイメージがつかめると思います。
+
+- https://github.com/bannzai/switchecker/tree/master/testdata
+- https://github.com/bannzai/switchecker/blob/master/check_test.go
+- https://github.com/bannzai/switchecker/blob/master/parser_test.go
+
 ## 技術
 使ったパッケージや構成をさらっと
 
