@@ -96,3 +96,5 @@ $ switchecker
 ```shell
 $ switchecker -source=enum.go -target=use.go,use2.go
 ```
+
+
