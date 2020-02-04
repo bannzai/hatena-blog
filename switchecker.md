@@ -142,4 +142,4 @@ Usage of switchecker:
 
 [go/ast](https://golang.org/pkg/go/ast/) を `-source` の引数の解析部分で [golang.org/x/tools/go/packages](https://godoc.org/golang.org/x/tools/go/packages) を `-target` で渡したファイルの型情報と `-source` から作った構造体の情報とマッピングしてチェックする。そういった流れになっています。
 
-`-target` の型情報取得は[go/types](https://golang.org/pkg/go/types/)でも行けるのかなあ。と思ったのですが、今回[Config.Check](https://golang.org/pkg/go/types/#Config.Check)
+`-target` の型情報取得は[go/types](https://golang.org/pkg/go/types/)でも行けるのかなあ。と思ったのですが[Config.Check](https://golang.org/pkg/go/types/#Config.Check)を使ってみた所、渡した引数のGoファイルの型情報は取得できているが、標準のパッケージではない自作のパッケージ等がimportされている場合はそっちの型情報が取得できずに `Config.Error` が返ってきてしまいました。少し試行錯誤しましたがイマイチimport先の型情報の取得を `go/types` を使って取得するやりかたがわからなくて、`golang.org/x/tools/go/packages` の方ではimport先の型情報まで取得できたのでこちらを使用しています。
