@@ -52,6 +52,11 @@ internal class ReaderImpl: Reader {
 }
 ```
 
+通常何かしらのエラーのログや出力は標準エラー出力に吐かれます。もっと噛み砕くと 
+1. Process X < 標準エラーに書くぞ
+1. 標準エラー < 書かれるぞ！  
+1. 書かれたから
+
 次に [DispatchSource.makeReadSource](https://developer.apple.com/documentation/dispatch/dispatchsource/2300104-makereadsource) で行っていることは `reader.readingFileDescriptor` を監視するために渡しています。きっと指定したファイルディスクリプタに向いているファイルに変更がある場合にデータを読み込むように割当られる仕組みなんでしょう(雑な理解。`source.setEventHandler` で変更を検知したときに実行したい処理内容を書きます。この場合はAutoLayoutでエラーが起きた時点のデータからログを整形してコンソールに流す。それ以外は整形せずにコンソールに流す。といったことをしています。最後の `source.activate()` で監視を始める流れになっています。
 
 
